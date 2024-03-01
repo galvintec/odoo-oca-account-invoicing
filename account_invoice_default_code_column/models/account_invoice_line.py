@@ -18,5 +18,5 @@ class AccountInvoiceLine(models.Model):
             line.name_without_default_code = line.name
             if line.product_id and line.product_id.default_code:
                 line.name_without_default_code = line.name_without_default_code.replace(
-                    f"[{line.product_id.default_code}]", ""
+                    f"{line.product_id.default_code}", ""
                 ).strip()
